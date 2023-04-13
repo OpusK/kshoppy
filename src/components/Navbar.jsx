@@ -9,7 +9,6 @@ export default function Navbar() {
 
   useEffect(() => {
     onUserStateChange((user) => {
-      console.log(user);
       setUser(user);
     });
   }, []);

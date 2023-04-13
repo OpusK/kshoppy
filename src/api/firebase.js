@@ -14,7 +14,7 @@ const firebaseConfig = {
   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
 };
 
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 // https://firebase.google.com/docs/auth/web/google-signin?hl=en&authuser=0
 const auth = getAuth();
@@ -24,7 +24,6 @@ export async function login() {
   return signInWithPopup(auth, provider)
     .then((result) => {
       const user = result.user;
-      console.log(user);
       return user;
     })
     .catch(console.error);
