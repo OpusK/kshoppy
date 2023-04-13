@@ -6,6 +6,11 @@
 ```bash
 yarn add react-router-dom react-icons
 ```
+- tailwindcss
+```bash
+yarn add -D tailwindcss
+npx tailwindcss init
+```
 
 ### Routing
 ```
