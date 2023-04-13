@@ -7,6 +7,17 @@
 yarn add react-router-dom react-icons
 ```
 
+### Routing
+```
+<App>
+  / <Home>
+  /products <AllProducts>
+  /products/new <NewProduct>
+  /products/:id <ProductDetail>
+  /carts <MyCart>
+```
+
+
 
 
 ---
