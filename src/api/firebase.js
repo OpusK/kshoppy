@@ -20,18 +20,13 @@ initializeApp(firebaseConfig);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
 
-export async function login() {
-  return signInWithPopup(auth, provider)
-    .then((result) => {
-      const user = result.user;
-      return user;
-    })
-    .catch(console.error);
+export function login() {
+  signInWithPopup(auth, provider).catch(console.error);
 }
 
 // https://firebase.google.com/docs/auth/web/google-signin?hl=en&authuser=0#next_steps
-export async function logout() {
-  return signOut(auth).then(() => null);
+export function logout() {
+  signOut(auth).catch(console.error);
 }
 
 // https://firebase.google.com/docs/auth/web/manage-users#get_the_currently_signed-in_user
