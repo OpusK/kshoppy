@@ -5,6 +5,7 @@ import { useAuthContext } from '../components/context/AuthContext';
 export default function ProtectedRoute({ children, requireAdmin }) {
   const { user } = useAuthContext();
 
+  // https://reactrouter.com/en/main/components/navigate
   if (!user || (requireAdmin && !user.isAdmin)) {
     return <Navigate to='/' replace />;
   }
