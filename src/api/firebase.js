@@ -30,10 +30,12 @@ export async function login() {
     .catch(console.error);
 }
 
+// https://firebase.google.com/docs/auth/web/google-signin?hl=en&authuser=0#next_steps
 export async function logout() {
   return signOut(auth).then(() => null);
 }
 
+// https://firebase.google.com/docs/auth/web/manage-users#get_the_currently_signed-in_user
 export function onUserStateChange(callback) {
   onAuthStateChanged(auth, (user) => {
     callback(user);
