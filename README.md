@@ -11,6 +11,10 @@ yarn add react-router-dom react-icons
 yarn add -D tailwindcss
 npx tailwindcss init
 ```
+- firbase
+```bash
+yarn add firebase
+```
 
 ### Routing
 ```
