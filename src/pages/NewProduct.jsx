@@ -36,7 +36,7 @@ export default function NewProduct() {
   };
 
   return (
-    <section>
+    <section className='w-full text-center'>
       <h2 className='text-2xl font-bold my-4'>새로운 제품 등록</h2>
       {success && <p className='my-2'>✅ {success}</p>}
       {file && (
