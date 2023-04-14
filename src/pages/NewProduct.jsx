@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../components/ui/Button';
+import { uploadImage } from '../api/uploader';
 
 export default function NewProduct() {
   const [product, setProduct] = useState({});
@@ -9,7 +10,6 @@ export default function NewProduct() {
     const { name, value, files } = e.target;
     if (name === 'file') {
       setFile(files && files[0]);
-      console.log(files[0]);
       return;
     }
     setProduct((product) => ({ ...product, [name]: value }));
@@ -17,6 +17,10 @@ export default function NewProduct() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Upload the image file to Cloudnary and Get URL
+    uploadImage(file) //
+      .then((url) => {
+        console.log(url);
+      });
     // Add new product to Firebase
   };
 
