@@ -9,7 +9,7 @@ import CartStatus from './CartStatus';
 export default function Navbar() {
   const { user, login, logout } = useAuthContext();
   return (
-    <header className='flex justify-between border-b border-gray-300 p-2'>
+    <header className='flex sticky top-0 z-50 justify-between border-b border-gray-300 p-2 bg-white'>
       <Link to='/' className='flex items-center text-4xl text-brand'>
         <FiShoppingBag />
         <h1>KShoppy</h1>
